@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINOS | Advanced Laser & Aesthetic Clinic | Dr. Shruti Gupta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #f8fcfc 0%, #edf7f6 100%); }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { skinos: { 50: '#f0fdfa', 500: '#0d9488', 600: '#0f766e', 900: '#115e59' } } } }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Top Bar -->
+    <div class="bg-teal-900 text-white py-2 text-xs md:text-sm text-center px-4">
+        <span class="font-medium">4.9★ Rated on Google (120+ Verified Reviews)</span> | 
+        <a href="tel:+919319224440" class="underline ml-2 hover:text-teal-200">Call Now: +91 93192 24440</a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter text-teal-900">SKINOS</div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-teal-600">Services</a>
+                <a href="#why-us" class="hover:text-teal-600">Why Us</a>
+                <a href="#contact" class="hover:text-teal-600">Location</a>
+            </div>
+            <a href="#booking" class="bg-teal-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-teal-700 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="gradient-bg py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Aesthetic Excellence</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Expert Aesthetic Care by Dr. Shruti Gupta</h1>
+                <p class="text-lg text-slate-600 mb-8">Transform your skin with advanced, evidence-based dermatological solutions tailored to your unique radiance.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#booking" class="bg-teal-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-800 transition text-center">Book Consultation</a>
+                    <a href="https://wa.me/919319224440?text=Hello%20SKINOS%20-%20Aesthetic%20Clinic%20by%20Dr.%20Shruti%20Gupta,%20I%20want%20to%20inquire%20about%20your%20services." class="border border-slate-200 bg-white px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition text-center">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-600 font-bold">4.9★</div>
+                        <div>
+                            <p class="font-bold">Verified Excellence</p>
+                            <p class="text-xs text-slate-500">120+ Reviews on Google Maps</p>
+                        </div>
+                    </div>
+                    <div class="h-px bg-slate-100"></div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between font-medium"><span>Signature Consultation</span> <span>Included</span></div>
+                        <div class="flex justify-between font-medium"><span>VIP 24/7 Support</span> <span>Available</span></div>
+                        <div class="flex justify-between font-medium"><span>Advanced Laser</span> <span>Precision</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">Advanced Aesthetic Solutions</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[ "Signature Consultation", "Laser Dermatology", "End-to-End Care", "VIP Membership" ].map(service => (
+                <div class="p-8 border border-slate-100 rounded-2xl hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold mb-4">{service}</h3>
+                    <p class="text-slate-500 text-sm mb-6">Customized protocol for optimal results and lasting skin health.</p>
+                    <a href="#booking" class="text-teal-600 font-bold text-sm">Inquire Now →</a>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-20 bg-slate-50 px-6">
+        <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+            <h2 class="text-3xl font-bold mb-2">Request an Appointment</h2>
+            <p class="text-slate-500 mb-8">Dr. Shruti Gupta's team will contact you shortly.</p>
+            <div id="form-feedback" class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium">
+                Success! Your request has been sent.
+            </div>
+            <form id="appointment-form" class="space-y-4">
+                <input type="text" placeholder="Full Name" required class="w-full p-4 border rounded-xl bg-slate-50">
+                <input type="tel" placeholder="Phone Number" required class="w-full p-4 border rounded-xl bg-slate-50">
+                <select class="w-full p-4 border rounded-xl bg-slate-50">
+                    <option>Signature Consultation</option>
+                    <option>Laser Procedure</option>
+                    <option>Other Treatment</option>
+                </select>
+                <button type="submit" class="w-full bg-teal-600 text-white py-4 rounded-xl font-bold hover:bg-teal-700">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="border-b pb-4">
+                <button class="flex justify-between w-full font-bold py-2 faq-toggle">Where is the clinic located? <span>+</span></button>
+                <p class="hidden text-slate-600 pt-2 text-sm">We are located at Plot 93, Phase 5, Golf Course Road, Sector 53, Gurugram.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-bold text-lg mb-2">SKINOS - Aesthetic Clinic</p>
+            <p class="text-slate-400 text-sm">Plot 93, Phase 5, Golf Course Road, Sector 53, Gurugram</p>
+            <p class="text-slate-500 mt-8 text-xs">&copy; 2023 SKINOS by Dr. Shruti Gupta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('appointment-form').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('form-feedback').classList.remove('hidden');
+            this.reset();
+        };
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.onclick = () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle('hidden');
+            };
+        });
+    </script>
+</body>
+</html>
